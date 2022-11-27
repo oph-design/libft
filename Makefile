@@ -86,7 +86,6 @@ $(NAME):	$(OBJS)
 			@echo "Libft compiled!"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c | $(OBJSF)
-			@echo "Compiling: $<"
 			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJSF):
