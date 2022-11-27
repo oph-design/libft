@@ -6,7 +6,7 @@
 #    By: oheinzel <oheinzel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 15:57:16 by oheinzel          #+#    #+#              #
-#    Updated: 2022/11/04 16:15:12 by oheinzel         ###   ########.fr        #
+#    Updated: 2022/11/27 16:51:55 by oheinzel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,13 +57,14 @@ SRC_FILES = 	ft_memset		\
 				ft_printchars	\
 				ft_printhex		\
 				ft_printf		\
+				get_next_line	\
 
 #Standard
 
 NAME		=	libft.a
 SRCS_DIR 	=	src/
 OBJS_DIR	=	obj/
-CC			=	gcc
+CC			=	cc
 CFLAGS		=	-Wall -Werror -Wextra
 RM			=	rm -f
 AR			=	ar -rcs

@@ -6,12 +6,17 @@
 /*   By: oheinzel <oheinzel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:57:07 by oheinzel          #+#    #+#             */
-/*   Updated: 2022/11/04 16:15:57 by oheinzel         ###   ########.fr       */
+/*   Updated: 2022/11/27 16:45:20 by oheinzel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+//BUFFER
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# endif
 
 //external
 # include <stdlib.h>
@@ -46,7 +51,7 @@ int		ft_isascii(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 void	ft_bzero(void *s, size_t n);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(char *s1);
 
@@ -74,13 +79,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-//printf util functions
-size_t	ft_printx(unsigned int x, char caps);
-size_t	ft_printp(unsigned long long x);
-size_t	ft_putchar(char c);
-size_t	ft_putstr(char *s);
-size_t	ft_putnbr(int x);
-size_t	ft_putunbr(unsigned int x);
 
 #endif

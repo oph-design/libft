@@ -6,7 +6,7 @@
 /*   By: oheinzel <oheinzel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:02:39 by oheinzel          #+#    #+#             */
-/*   Updated: 2022/10/20 10:55:10 by oheinzel         ###   ########.fr       */
+/*   Updated: 2022/11/27 16:52:24 by oheinzel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*res;
 	size_t	i;
 	size_t	len;
+	size_t	len_s1;
 	size_t	j;
 
 	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	len_s1 = ft_strlen(s1);
+	len = len_s1 + ft_strlen(s2) + 1;
 	res = malloc(len * sizeof(char));
 	if (!res)
 		return (NULL);
@@ -29,7 +31,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (i < len)
 	{
-		if (i < ft_strlen(s1))
+		if (i < len_s1)
 			res[i] = s1[i];
 		else
 		{

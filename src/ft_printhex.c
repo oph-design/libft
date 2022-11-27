@@ -6,11 +6,11 @@
 /*   By: oheinzel <oheinzel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:59:00 by oheinzel          #+#    #+#             */
-/*   Updated: 2022/11/04 16:11:42 by oheinzel         ###   ########.fr       */
+/*   Updated: 2022/11/27 16:39:13 by oheinzel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 static char	hex_digit(int v, char caps)
 {

@@ -6,11 +6,11 @@
 /*   By: oheinzel <oheinzel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:37:50 by oheinzel          #+#    #+#             */
-/*   Updated: 2022/11/04 16:11:24 by oheinzel         ###   ########.fr       */
+/*   Updated: 2022/11/27 16:39:49 by oheinzel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 size_t	ft_putchar(char c)
 {
