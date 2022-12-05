@@ -34,10 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		if (i < len_s1)
 			res[i] = s1[i];
 		else
-		{
-			res[i] = s2[j];
-			j++;
-		}
+			res[i] = s2[j++];
 		i++;
 	}
 	return (res);
