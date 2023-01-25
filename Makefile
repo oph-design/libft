@@ -6,7 +6,7 @@
 #    By: oheinzel <oheinzel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 15:57:16 by oheinzel          #+#    #+#              #
-#    Updated: 2023/01/11 10:55:10 by oheinzel         ###   ########.fr        #
+#    Updated: 2023/01/25 10:25:44 by oheinzel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,10 @@ CFLAGS		=	-Wall -Werror -Wextra
 RM			=	rm -f
 AR			=	ar -rcs
 
+GREEN	= \033[0;32m
+CYAN	= \033[0;36m
+WHITE	= \033[0m
+
 #Sources
 
 SRCS 		= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
@@ -88,8 +92,10 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			@$(AR) $(NAME) $(OBJS)
 			@ranlib $(NAME)
+			@echo "$(GREEN)libft compiled!$(WHITE)"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c | $(OBJSF)
+			@echo "$(CYAN)Compiling $(WHITE): $<"
 			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJSF):
